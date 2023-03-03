@@ -28,10 +28,26 @@
         <label>activo</label>
         <locationX>176</locationX>
         <locationY>335</locationY>
+        <connector>
+            <targetReference>otro_cambio</targetReference>
+        </connector>
         <inputAssignments>
             <field>Active__c</field>
             <value>
                 <stringValue>Yes</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>otro_cambio</name>
+        <label>otro cambio</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>DunsNumber</field>
+            <value>
+                <stringValue>S-1</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -46,5 +62,5 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
 </Flow>
